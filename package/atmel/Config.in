@@ -1,0 +1,7 @@
+config BR2_PACKAGE_ATMEL
+	bool "Atmel Qt Demos"
+	depends on BR2_PACKAGE_QT
+	help
+	  Qt is a cross-platform application and UI framework for
+	  developers using C++.
+
