@@ -14,6 +14,14 @@ echo "done" >> ${1}/root/go.sh
 echo "fi" >> ${1}/root/go.sh
 chmod +x ${1}/root/go.sh
 
+cat << EOF > ${1}/init
+#!/bin/sh
+
+mount -t devtmpfs none /dev
+exec /linuxrc
+EOF
+chmod +x ${1}/init
+
 cp board/atmel/sama5d3ek_demo/MPEG2_480_272.avi ${1}/root/MPEG2_480_272.avi
 
 # alsa stuff
