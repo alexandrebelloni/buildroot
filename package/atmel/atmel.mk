@@ -4,7 +4,7 @@
 #
 #############################################################
 
-ATMEL_VERSION = 1.0
+ATMEL_VERSION = 1.2
 ATMEL_SOURCE = home-automation-$(ATMEL_VERSION).tar.gz
 ATMEL_SITE_METHOD = file
 
