@@ -339,4 +339,16 @@ config BR2_ROOTFS_POST_SCRIPT_ARGS
 	  directory / images directory. The arguments in this option will be
 	  passed *after* those.
 
+config BR2_SYSTEM_LOCALTIME
+	string "default local time"
+	help
+	  The time zone to install as the default local time, expressed as a
+	  tzdata location, such as:
+	    GMT, Europe/Paris, America/New_York, Pacific/Wallis...
+
+	  If empty, no local time will be set, and the dates will be
+	  expressed in UTC.
+
+	  TODO add depends
+
 endmenu

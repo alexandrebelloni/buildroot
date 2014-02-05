@@ -41,11 +41,11 @@ define TZDATA_INSTALL_TARGET_CMDS
 	for zone in posix/*; do                 \
 	    ln -sfn "$${zone}" "$${zone##*/}";  \
 	done
-	if [ -n "$(BR2_PACKAGE_TZDATA_LOCALTIME)" ]; then                   \
+	if [ -n "$(BR2_SYSTEM_LOCALTIME)" ]; then                   \
 	    cd $(TARGET_DIR)/etc;                                           \
-	    ln -sf ../usr/share/zoneinfo/$(BR2_PACKAGE_TZDATA_LOCALTIME)    \
+	    ln -sf ../usr/share/zoneinfo/$(BR2_SYSTEM_LOCALTIME)    \
 	           localtime;                                               \
-	    echo "$(BR2_PACKAGE_TZDATA_LOCALTIME)" >timezone;               \
+	    echo "$(BR2_SYSTEM_LOCALTIME)" >timezone;               \
 	fi
 endef
 
