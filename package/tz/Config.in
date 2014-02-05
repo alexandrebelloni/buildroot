@@ -1,0 +1,9 @@
+comment "TZ needs a uclibc toolchain"
+	depends on !BR2_TOOLCHAIN_USES_UCLIBC
+
+config BR2_PACKAGE_TZ
+	bool "TZ"
+	depends on BR2_TOOLCHAIN_USES_UCLIBC
+	help
+	  Time zone file
+
