@@ -22,6 +22,8 @@ endef
 define HOST_ZIC_INSTALL_CMDS
 	mkdir -p $(HOST_DIR)/usr/sbin
 	install -D -m 755 $(@D)/zic $(HOST_DIR)/usr/sbin/zic
+	mkdir -p $(HOST_DIR)/usr/include
+	install -D -m 644 $(@D)/tzfile.h $(HOST_DIR)/usr/include/tzfile.h
 endef
 
 $(eval $(host-generic-package))
